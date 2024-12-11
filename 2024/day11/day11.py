@@ -17,7 +17,7 @@ def get_stones_count_in_n_iterations(stones: list[int], iterations: int = 75) ->
                 new_stones[int(str(stone)[: num_digits // 2])] += stones_dict[stone]
                 new_stones[int(str(stone)[num_digits // 2 :])] += stones_dict[stone]
             else:
-                new_stones[stone * 2024] = stones_dict[stone]
+                new_stones[stone * 2024] += stones_dict[stone]
         stones_dict = new_stones
     return sum(stones_dict.values())
 
